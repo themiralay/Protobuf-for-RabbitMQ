@@ -17,7 +17,7 @@ def main():
         parsed = awesomeMessage.ParseFromString(body)
         print(" [x] Received %r" % parsed)
 
-    channel.basic_consume(queue='url_data_crawler', on_message_callback=callback, auto_ack=True)
+    channel.basic_consume(queue='protobuf_queue', on_message_callback=callback, auto_ack=True)
 
     print(' [*] Waiting for messages. To exit press CTRL+C')
     channel.start_consuming()
