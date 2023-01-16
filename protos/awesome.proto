@@ -1,4 +1,4 @@
-// awesome.proto
+// CRYPTOTYLER awesome.proto
 
 syntax = "proto3";
 package awesomepackage;
