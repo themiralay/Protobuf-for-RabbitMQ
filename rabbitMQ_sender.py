@@ -20,11 +20,11 @@ message = protoMaker().SerializeToString()
 
 #message = ' '.join(sys.argv[1:]) or "CRYPTOTYLER"
 # channel.basic_publish(exchange='crawler',
-#                       routing_key='url_crawl',
+#                       routing_key='protobuf_queue',
 #                       body=message)
 channel.basic_publish(
     exchange='',
-    routing_key='url_data_crawler',
+    routing_key='protobuf_queue',
     body=message,
     properties=pika.BasicProperties(
         delivery_mode=pika.spec.PERSISTENT_DELIVERY_MODE
