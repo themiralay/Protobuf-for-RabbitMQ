@@ -1,0 +1,8 @@
+// awesome.proto
+
+syntax = "proto3";
+package awesomepackage;
+
+message AwesomeMessage {
+    string awesomeField = 1; // becomes awesomeField
+}
